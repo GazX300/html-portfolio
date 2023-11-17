@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє Портфоліо</title>
+    <style>
+
+        body {
+            background-color: #121212;
+            color: #00ffcc;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00ffcc;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .work-link {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    </head>
+
+<body>
+
+<header>
+    <h1>Моє Портфоліо</h1>
+    <nav>
+        <ul>
+            <li><a href="#work1">Робота 1</a></li>
+            <li><a href="#work2">Робота 2</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="work1">
+    <h2>Робота 1</h2>
+    <p>Створення сайту з героями DOTA 2.</p>
+
+    <img src="../../../../HTML - Моє портфоліо/assets/images/LR1.jpg" alt="не працює((" height="616" width="1280"/>
+    <a class="work-link" href="https://github.com/GazX300/Laboratorky/blob/main/LB1.html">Переглянути</a>
+</section>
+
+<section id="work2">
+    <h2>Робота 2</h2>
+    <p>Сайт про Mercedes-Benz.</p>
+
+    <img src="../../../../HTML - Моє портфоліо/assets/images/LR2.jpg" alt="також не працює))" height="621" width="1280"/>
+    <a class="work-link" href="https://github.com/GazX300/Laboratorky/blob/main/%D0%9B%D0%A0%202.html">Переглянути</a>
+</section>
+<script>
+    // Отримуємо всі посилання "Переглянути"
+    const workLinks = document.querySelectorAll('.work-link');
+
+    // Додаємо обробник події для кожного посилання
+    workLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.color = '#ffcc00'; // Змінюємо колір тексту при наведенні
+            link.style.transform = 'translateY(-5px)'; // Зміщуємо вгору при наведенні
+        });
+
+        link.addEventListener('mouseout', () => {
+            link.style.color = '#00ffcc'; // Повертаємо початковий колір тексту
+            link.style.transform = 'translateY(0)'; // Знімаємо зміщення при відведенні
+        });
+    });
+</script>
+
+
+<footer>
+    <p>&copy; 2023 Моє Портфоліо. Усі права захищені.</p>
+</footer>
+
+</body>
+
+</html>
